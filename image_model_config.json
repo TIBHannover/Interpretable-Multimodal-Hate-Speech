@@ -1,0 +1,13 @@
+{
+  "batch_size": 32,
+  "epochs": 30,
+  "train_split_path": "/nfs/home/hakimovs/hate-speech-detection/resources/Memotion7k/train_over_sampled_images",
+  "valid_split_path": "/nfs/home/hakimovs/hate-speech-detection/resources/Memotion7k/valid_images",
+  "test_split_path": "/nfs/home/hakimovs/hate-speech-detection/resources/Memotion7k/test_images",
+  "number_of_classes": 2,
+  "crop_length": 229,
+  "target_size": 500,
+  "image_model": "inceptionv3",
+  "output_file_path": "/nfs/home/hakimovs/hate-speech-detection/resources/Memotion7k/memotion_finetuned_inceptionv3_model.hdf5",
+  "image_feature_size": 2048
+}
