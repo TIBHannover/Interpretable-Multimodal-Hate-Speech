@@ -1,0 +1,15 @@
+{
+  "base_dir": "/home/hakimovs/NFS/hate-speech-detection",
+  "batch_size": 64,
+  "epochs": 50,
+  "epoch_patience": 10,
+  "train_split_path": "resources/Memotion7k/train.txt",
+  "valid_split_path": "resources/Memotion7k/valid.txt",
+  "test_split_path": "resources/Memotion7k/test.txt",
+  "sample_size": 10,
+  "optimizer": "adam",
+  "combination": "concatenation",
+  "modalities": ["image","image_text"],
+  "use_lr_scheduler": false,
+  "use_multiple_outputs": false
+}

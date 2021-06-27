@@ -1,0 +1,98 @@
+{
+  "base_dir": "/home/hakimovs/NFS/hate-speech-detection",
+  "train_split_path": "resources/Memotion7k/train_over_sampled.txt",
+  "valid_split_path": "resources/Memotion7k/valid.txt",
+  "test_split_path": "resources/Memotion7k/test.txt",
+  "batch_size": 1,
+  "sample_size": 100,
+  "epochs": 2,
+  "epoch_patience": 2,
+  "optimizer": "adam",
+  "num_parallel_tree": 30,
+  "result_file_name": "model_results.txt",
+  "image_feature_type": "prediction",
+  "text_models": {"BERT-IT":"memotion7k_dnn_results/24-06-2021_15:59:30"},
+  "not_used_text_models": {"BERT-IT":"memotion7k_dnn_results/24-06-2021_15:59:30"},
+  "hatewords_models": {},
+  "not_used_hatewords_models": {"multiclass_hateword": 1493},
+  "external_text_models": {},
+  "not_used_external_text_models": {"founta_dataset_model":"founta_results/24-06-2021_08:36:27/memotion",  "text_emotion":"text_emotion_results/24-06-2021_08:36:34/memotion",    "hatebert_offenseval": "hatebert_results/memotion/offenseval", "hatebert_abuseval": "hatebert_results/memotion/abuseval", "hatebert_hateval": "hatebert_results/memotion/hateval"},
+  "image_text_relations": {},
+  "image_models": [],
+  "visual_sentiment": {},
+  "not_used_visual_sentiment": {"negative": 0, "neutral": 1, "positive": 2},
+  "not_used_image_models": [
+    "nudity", "face_emotions", "places365", "image_inception-v3", "fine-tuned-inception-v3",
+    "hatewords-mobilenet", "hateword-multiclass-xception"
+  ],
+  "all_image_text_relations": {"TT_CMI": 0, "TT_SC": 1, "TT_STATUS": 2, "TT_Combination": 3, "IT_CMI": 4, "IT_SC": 5, "IT_STATUS": 6, "IT_Combination": 7},
+  "unused_models": {
+    "hatewords_models": {"binary":1, "multiclass":1493},
+    "bert": "results/01-05-2020_21:09:18",
+    "hate_words": "results/01-05-2020_14:13:29",
+    "char_emb": "results/01-05-2020_14:13:29",
+    "image_inception-v3": "resources/svm_image_features/results/03-05-2020_00:46:20",
+    "hatewords-mobilenet": "resources/svm_image_features/results/01-05-2020_17:11:35",
+    "yolo_v3": "resources/svm_image_features/results/01-05-2020_17:12:57",
+    "nudity": "resources/svm_image_features/results/01-05-2020_17:19:11",
+    "founta_dataset_model": "results/01-05-2020_23:34:02",
+    "text_emotion": "text_emotion_results/14-05-2020_22:21:21",
+    "toxic_comment": "toxic_comment_results/15-05-2020_10:31:24"
+  },
+  "prediction_image_models": {
+    "nudity": [0,1],
+    "hatewords-mobilenet": [2,3],
+    "face_emotions": [4,10],
+    "places365": [10, 375],
+    "image_inception-v3": [375,1375],
+    "fine-tuned-inception-v3": [1375,1376],
+    "hateword-binary-xception": [1377,1378],
+    "hateword-multiclass-xception": [1379,1805],
+    "violence_xception": [1806,1807]
+  },
+  "all_models_names": {
+    "nudity": "N",
+    "hatewords-mobilenet": "VH",
+    "face_emotions": "FE",
+    "places365": "S",
+    "image_inception-v3": "O",
+    "fine-tuned-inception-v3": "Inc-I",
+    "hateword-multiclass-xception": "M-VH",
+    "violence_xception": "V",
+    "founta_dataset_model": "TH",
+    "text_emotion": "TE",
+    "hatebert_hateval": "HB-H",
+    "hatebert_offenseval": "HB-O",
+    "hatebert_abuseval": "HB-A",
+    "toxic_comment": "WT",
+    "multiclass_hateword":"MHW"
+  },
+  "prediction_text_models": {
+    "text_emotion": {
+      "labels": ["anticipation","disgust","fear", "joy", "love", "optimism","pessimism","sadness","surprise","trust"]
+    },
+    "toxic_comment": {
+      "labels": ["toxic", "severe_toxic", "obscene", "threat", "insult", "identity_hate"]
+    },
+    "founta_dataset_model": {
+      "labels": ["Hate"]
+    },
+    "hatebert_offenseval": {
+      "labels": ["Hate"]
+    },
+    "hatebert_hateval": {
+      "labels": ["Hate"]
+    },
+    "hatebert_abuseval": {
+      "labels": ["Hate"]
+    }
+  },
+  "feature_image_models": {
+    "yolo_v3": [0,1024],
+    "nudity": [1024,3072],
+    "face_emotions": [3072,7680],
+    "places365": [7680, 11776],
+    "image_inception-v3": [11776,13824],
+    "hatewords-mobilenet": [13824,14848]
+  }
+}
